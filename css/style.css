@@ -1,0 +1,357 @@
+:root {
+    --alabaster: #FDF8F0;
+    --dark-charcoal: #2D3748;
+    --amber: #D97706;
+    --emerald: #047857;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-charcoal);
+}
+
+.heading-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-font {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-body-custom {
+    background-color: var(--alabaster);
+}
+
+.text-primary-custom {
+    color: var(--dark-charcoal);
+}
+
+.text-secondary-custom {
+    color: #4A5568;
+}
+
+.text-accent-custom {
+    color: var(--amber);
+}
+
+.btn-primary-custom {
+    background-color: var(--amber);
+    border-color: var(--amber);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover {
+    background-color: #c26a05;
+    border-color: #c26a05;
+    color: white;
+}
+
+.btn-secondary-custom {
+    background-color: var(--emerald);
+    border-color: var(--emerald);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #035c44;
+    border-color: #035c44;
+    color: white;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-charcoal);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--amber);
+}
+
+.border-bottom-custom {
+    border-bottom: 2px solid var(--amber);
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.card-title-custom {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-charcoal);
+    font-weight: 600;
+}
+
+.card-subtitle-custom {
+    color: var(--emerald);
+    font-weight: 500;
+}
+
+.card-date {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.card-body ul {
+    padding-left: 1.2rem;
+}
+
+.card-body li {
+    margin-bottom: 0.5rem;
+}
+
+.image-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease-in-out;
+}
+
+.image-card:hover img {
+    transform: scale(1.05); 
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    transition: opacity 0.3s ease;
+}
+
+.card-title-overlay {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.card-text-overlay {
+    font-family: 'Inter', sans-serif;
+    opacity: 0; 
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.image-card:hover .card-text-overlay {
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+@media (max-width: 767.98px) {
+    .image-card {
+        height: 50vh; 
+    }
+}
+
+.carousel-custom {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.carousel-item {
+    aspect-ratio: 16 / 9;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.carousel-caption h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel-caption p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+/* --- New Styles for Food Page Gallery --- */
+.food-card {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.food-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1; /* Makes the card a perfect square */
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.food-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease-in-out;
+}
+
+.food-card:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.food-card:hover .food-card-overlay {
+    opacity: 1; /* Reveal overlay on hover */
+}
+
+.food-card-overlay h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.food-card-overlay p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+/* --- New Styles for Tourist Page Timeline --- */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* The vertical line running down the middle */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.5rem; /* Positioned on the left */
+    height: 100%;
+    width: 4px;
+    background-color: #e2e8f0; /* A light gray line */
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem; /* Space between items */
+    padding-left: 4rem; /* Space to the right of the line */
+}
+
+/* The dot on the timeline */
+.timeline-dot {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 1.5rem; /* Aligned with the line */
+    transform: translateX(-50%); /* Center the dot on the line */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--amber); /* Use our accent color */
+    border: 3px solid var(--alabaster);
+}
+
+/* Updated timeline content to make room for image and add spacing */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    display: flex; /* Use flexbox to align image and text */
+    flex-direction: column; /* Stack image and text vertically by default */
+}
+
+/* Style for the image container within the timeline content */
+.timeline-content-img {
+    width: 100%; /* Take full width of its container */
+    height: 150px; /* Fixed height for consistency */
+    overflow: hidden; /* Important to hide overflow during zoom */
+    border-radius: 0.5rem; /* Slightly rounded corners for the image itself */
+    margin-bottom: 1rem; /* Space between image and text */
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* For the zoom effect */
+}
+
+.timeline-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content-img:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Adjust timeline content for larger screens to align image and text */
+@media (min-width: 768px) {
+    .timeline-content {
+        flex-direction: row; /* On larger screens, place image and text side-by-side */
+        align-items: flex-start; /* Align items to the top */
+    }
+    .timeline-content-img {
+        flex-shrink: 0; /* Prevent image from shrinking */
+        width: 200px; /* Fixed width for the image on larger screens */
+        height: 120px; /* Adjust height for landscape image */
+        margin-bottom: 0; /* Remove bottom margin */
+        margin-right: 1.5rem; /* Add space to the right of the image */
+    }
+}
+/* New outline button for social links */
+.btn-outline-custom {
+    background-color: transparent;
+    border: 2px solid var(--emerald);
+    color: var(--emerald);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--emerald);
+    color: white;
+}
